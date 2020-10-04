@@ -1,0 +1,21 @@
+.footer .wrapper > * + * {
+}
+.contacts {
+	margin-top: -50px;
+	flex-basis: 23.5%;
+}
+.location {
+	margin-top: -50px;
+	flex-basis: 25.17%;
+}
+
+.footer__img {
+	flex-basis: 25%;
+}
+
+.footer-btn.mail {
+	margin: 40px 0 40px;
+}
+.location a:first-child {
+	margin: 33px 0 33px;
+}

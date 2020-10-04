@@ -1,0 +1,35 @@
+.list-help {
+	margin: 5px auto 0;
+	width: 85.5%;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	font-size: 1rem;
+	justify-content: center;
+}
+.list-help li + li {
+	margin-left: 12em;
+}
+
+.list-help li:nth-child(5) {
+	//погрешность ширины элементов
+	margin-left: 11.7em;
+}
+
+.list-help__element {
+	margin-top: 55px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+}
+
+.list-help h4 {
+	margin-top: 30px;
+	font-family: Georgia;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2em;
+	line-height: 115%;
+	color: #545454;
+}

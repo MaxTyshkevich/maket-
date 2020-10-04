@@ -1,0 +1,36 @@
+.pets__heading-center {
+	width: 33.33%;
+}
+
+.carousel {
+	display: flex;
+	align-items: center;
+}
+
+.carousel-cars {
+	flex: 1;
+	margin-top: 58px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.card {
+	padding: 30px 35px;
+	display: flex;
+	flex-direction: column;
+	@extend %transition;
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+	}
+}
+
+.card figcaption {
+	margin: 26px 0 30px;
+	text-align: center;
+	font-size: 2rem;
+	line-height: 23px;
+	letter-spacing: 0.06em;
+	color: #545454;
+}

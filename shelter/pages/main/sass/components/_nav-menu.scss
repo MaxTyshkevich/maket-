@@ -1,0 +1,15 @@
+.nav-menu {
+	list-style: none;
+	display: flex;
+	font-size: 1.5em;
+	line-height: 1.6;
+}
+
+.nav-menu > li + li {
+	margin-left: 35px;
+}
+
+.nav-menu > li > a {
+	display: block;
+	color: $color-link-header;
+}

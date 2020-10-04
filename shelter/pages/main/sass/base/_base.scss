@@ -1,0 +1,68 @@
+:root {
+	box-sizing: border-box;
+	font-size: 10px;
+}
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+	font-family: Georgia;
+	line-height: 130%;
+	letter-spacing: 0.06em;
+	color: $color-h3;
+}
+section {
+	background-color: F6F6F6;
+}
+.main-title__light {
+	color: #ffffff;
+}
+p,
+a {
+	font-family: "Arial";
+}
+
+.start-screen,
+.footer {
+	background: url(../../../../assets/images/noise_transparent.png),
+		radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+}
+img {
+	max-width: 100%;
+}
+
+.main-title {
+	font-family: Georgia;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 3.5rem;
+	line-height: 130%;
+	letter-spacing: 0.06em;
+}
+.dark {
+	color: #545454;
+}
+
+section {
+	padding: 80px 0 100px;
+}
+.center {
+	text-align: center;
+}
+.block {
+	display: block;
+}
+.heading-center {
+	margin: auto;
+}
