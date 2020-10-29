@@ -1,35 +1,46 @@
 .list-help {
-	margin: 5px auto 0;
-	width: 85.5%;
-	display: flex;
-	flex-wrap: wrap;
+	margin: 60px auto 0;
+	//	width: 85.5%; // не понятно
 	list-style: none;
-	font-size: 1rem;
+	display: flex;
+	flex-flow: row wrap;
 	justify-content: center;
-}
-.list-help li + li {
-	margin-left: 12em;
-}
-
-.list-help li:nth-child(5) {
-	//погрешность ширины элементов
-	margin-left: 11.7em;
+	column-gap: 12em;
+	row-gap: 5.5em;
+	@include media-tablet {
+		column-gap: 6em;
+	}
+	@include media-mobile {
+		margin-top: 42px;
+		column-gap: 3em;
+		row-gap: 3em;
+	}
 }
 
 .list-help__element {
-	margin-top: 55px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	justify-content: space-between;
 	text-decoration: none;
+	align-items: center;
+	max-width: max-content;
+	height: 113px; //elem deferent height
+	@include media-tablet {
+		width: 170px; // перебить max-width
+	}
+	@include media-mobile {
+		width: 130px;
+		height: 87px;
+	}
 }
 
-.list-help h4 {
+/* .list-help h4 {
 	margin-top: 30px;
-	font-family: Georgia;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 2em;
-	line-height: 115%;
-	color: #545454;
-}
+	@include media-mobile {
+		margin-top: 20px;
+	}
+} */
+
+/* .list-help li + li {
+	margin-left: 119px; // между елементами при переходе строки тоже 120px (что плохо)
+} */

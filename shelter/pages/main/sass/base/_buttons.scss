@@ -1,52 +1,96 @@
-button {
+.button {
 	cursor: pointer;
-	font-size: 17px;
+	white-space: nowrap;
+	@include font(1.7rem, $font-primary);
+	@extend %transition;
 	line-height: 130%;
 	letter-spacing: 0.06em;
 	text-align: center;
 	padding: 15px 45px;
 	border-radius: 100px;
 	border: none;
+	outline: none;
+
+	&--primary {
+		background-color: $color-primary;
+		color: $color-dark-3xl;
+
+		&:hover {
+			background: $color-primary-light;
+		}
+	}
+
+	&--secondary {
+		color: $color-dark-3xl;
+		padding: 13px 43px;
+		border: 2px solid $color-primary;
+
+		&:hover {
+			background: $color-primary-light;
+			border-color: $color-primary-light;
+		}
+	}
+
+	&--credit {
+		display: flex;
+		align-items: center;
+		padding: 10px 15px;
+		background: $color-primary;
+		border-radius: 9px;
+		@include media-mobile {
+			margin: auto;
+		}
+
+		.button-credit__img {
+			margin-right: 15px;
+		}
+		&:hover {
+			background: $color-primary-light;
+		}
+	}
 }
 
-.button--primary {
-	color: $color-text-button;
-	background: $bg-button;
+.button-arrow {
+	position: absolute;
+	top: calc(50% - 24px);
+	cursor: pointer;
+	width: 52px;
+	height: 52px;
+	border: 2px solid $color-primary;
+	border-radius: 100px;
 	@extend %transition;
-	&:hover {
-		background: #fddcc4;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("../../../../assets/icons/Arrow-left.svg");
+	outline: none;
+
+	@include media-mobile {
+		top: initial;
+		bottom: 7.7%;
 	}
-}
-.button--secondary {
-	color: #292929;
-	border: 2px solid #f1cdb3;
-	&:hover {
-		background: #fddcc4;
-		border-color: #fddcc4;
+
+	&--right {
+		right: 0px;
+		transform: rotate(-180deg);
+
+		@include media-mobile {
+			right: 19.5%;
+		}
 	}
-}
 
-/* временно нужно спешить  */
-.footer {
-	padding-top: 40px;
-}
+	&--left {
+		left: 0px;
+		transform: rotate(0deg);
 
-.button-credit {
-	display: flex;
-	align-items: center;
-	padding: 1em 1.5em;
-	background: #f1cdb3;
-	border-radius: 9px;
-	font-size: 1rem;
-}
+		@include media-mobile {
+			left: 19.5%;
+		}
+	}
 
-.button-credit > * + * {
-	margin-left: 15px;
-}
-.button-credit__link {
-	font-size: 2em;
-	color: #545454;
-	text-decoration: none;
+	&:hover {
+		background-color: $color-primary-light;
+		border-color: $color-primary-light;
+	}
 }
 
 .footer-btn {
@@ -64,43 +108,9 @@ button {
 	margin-left: 20px;
 }
 
-.button-arrow {
-	margin-top: 57px;
-	cursor: pointer;
-	width: 52px;
-	height: 52px;
-	border: 2px solid #f1cdb3;
-	border-radius: 100px;
-	@extend %transition;
-	&:hover {
-		background-color: #fddcc4;
-		border-color: #fddcc4;
-	}
-}
-
-.button-arrow__img {
-	display: block;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url("../../../../assets/icons/Arrow-left.svg");
-}
-.img--left {
-	transform: rotate(0deg);
-}
-.img--right {
-	transform: rotate(-180deg);
-}
-
-a:link {
+.link {
+	@include font(1.5rem, $font-secondary);
+	line-height: 160%;
 	text-decoration: none;
-}
-
-a:hover {
 	cursor: pointer;
-}
-
-a.link-active {
-	color: #fafafa;
-	border-bottom: 3px solid $bg-button;
 }

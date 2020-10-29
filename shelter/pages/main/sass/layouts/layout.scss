@@ -1,17 +1,14 @@
-.header {
-	padding-top: 60px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-bottom: 60px;
-}
-
-.footer .wrapper {
+.header__line {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-
-.help .heading-center {
-	width: 25%;
-}
+/* 
+.start-screen {
+	@include media-mobile {
+		padding-top: 60px;
+		.header {
+			position: fixed;
+		}
+	}
+} */

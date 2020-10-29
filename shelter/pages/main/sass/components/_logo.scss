@@ -5,14 +5,18 @@
 	font-size: 1rem;
 }
 .logo__tittle {
-	font-size: 3.2em;
+	@include font(3.2rem, $font-primary);
 	line-height: 110%;
-	color: #f1cdb3;
+	color: $color-primary;
+	letter-spacing: 0.06em;
+
 	margin-bottom: 10px;
 }
+
 .logo__sub-tittle {
-	font-size: 1.3em;
+	@include font(1.3rem, $font-secondary);
+
 	line-height: 15px;
 	letter-spacing: 0.1em;
-	color: #ffffff;
+	color: $color-light-xl;
 }

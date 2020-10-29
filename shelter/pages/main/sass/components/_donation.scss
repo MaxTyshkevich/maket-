@@ -1,42 +1,37 @@
-.donation .wrapper {
-	display: flex;
-	justify-content: center;
-}
-
-/* .donation-img {
-	flex: 0 0 42%;
-} */
-
 .donation-content {
-	flex: 0 0 31.6%;
+	margin: 1px 0;
+	//max-width: 380px; //flex: 0 0 31.6%;
+	flex-basis: 31.6%;
+	@include media-tablet {
+		width: 49.48%;
+	}
+	@include media-mobile {
+		width: auto;
+		text-align: center;
+	}
 }
 
-.information__bank {
-	font-size: 15px;
-	line-height: 110%;
-	font-weight: normal;
-	display: flex;
-	align-items: center;
-	letter-spacing: 0.06em;
-	color: #545454;
-}
-.information > h3 {
-	padding-right: 70px;
+.information__title {
+	//padding-right: 70px;
+
+	span {
+		display: inline-block;
+	}
 }
 .information > * + * {
-	margin-top: 20px;
-}
-.information__description {
-	font-family: Arial;
-	font-style: italic;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 18px;
-	color: #b2b2b2;
+	margin-top: 21px;
 }
 
 .donation-img {
 	display: flex;
 	align-items: center;
 	margin-right: 30px;
+	@include media-tablet {
+		order: 1;
+		margin-top: 60px;
+		margin-right: 0;
+	}
+	@include media-mobile {
+		margin-top: 42px;
+	}
 }

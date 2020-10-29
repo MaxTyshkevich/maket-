@@ -11,58 +11,109 @@
 	box-sizing: inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-button {
-	font-family: Georgia;
-	line-height: 130%;
-	letter-spacing: 0.06em;
-	color: $color-h3;
+.start-screen {
+	background: $start-screen-gradient-background;
 }
-section {
-	background-color: F6F6F6;
-}
-.main-title__light {
-	color: #ffffff;
-}
-p,
-a {
-	font-family: "Arial";
-}
-
-.start-screen,
 .footer {
-	background: url(../../../../assets/images/noise_transparent.png),
-		radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
-}
-img {
-	max-width: 100%;
+	background: $footer-gradient-background;
 }
 
-.main-title {
-	font-family: Georgia;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 3.5rem;
-	line-height: 130%;
-	letter-spacing: 0.06em;
-}
-.dark {
-	color: #545454;
+img {
+	//max-width: 100%;
+	display: block;
+	@include media-tablet {
+		max-width: 100%;
+	}
 }
 
 section {
-	padding: 80px 0 100px;
+	padding: 8em 0 10em;
+
+	&.about {
+		background: $color-light-xl;
+	}
+	&.pets {
+		background: $color-light-l;
+	}
+	&.help {
+		background: $color-light-l;
+	}
+	&.donation {
+		background: $color-light-l;
+	}
+	@include media-mobile {
+		padding: 4.2em 0;
+	}
 }
-.center {
+
+h2 {
+	color: $color-dark-l;
+	@include font(4.4rem, Georgia);
+	line-height: 130%;
+
+	@include media-mobile {
+		font-size: 2.5rem;
+	}
+}
+
+h3 {
+	color: $color-dark-l;
+	@include font(3.5rem, Georgia);
+	line-height: 130%;
+	letter-spacing: 0.06em;
+
+	@include media-mobile {
+		font-size: 2.5rem;
+	}
+}
+h4 {
+	@include font(2rem, Georgia);
+	line-height: 115%;
+	letter-spacing: 0.06em;
+	color: $color-dark-l;
+	@include media-mobile {
+		font-size: 1.5rem;
+		line-height: 110%;
+	}
+}
+h5 {
+	@include font(1.5rem, Georgia);
+	line-height: 110%;
+	letter-spacing: 0.06em;
+	color: $color-dark-l;
+}
+
+.paragraph-large {
+	@include font(1.5rem, Arial);
+	line-height: 160%;
+	color: $color-dark-l;
+}
+
+.paragraph-small {
+	@include font(1.2rem, $style: italic, $family: Arial);
+	color: $color-dark-m;
+	line-height: 150%;
+	@include media-mobile {
+		text-align: justify;
+		padding: 0 1em;
+	}
+}
+
+.pets__title {
+	/* 	text-indent: 6rem;
+  max-width: 400px; //width: 33.334%; */
 	text-align: center;
-}
-.block {
-	display: block;
-}
-.heading-center {
 	margin: auto;
+	span {
+		display: inline-block;
+	}
+}
+
+.help__title {
+	//max-width: 310px;
+	text-align: center;
+	margin: auto;
+	span {
+		display: inline-block;
+	}
 }

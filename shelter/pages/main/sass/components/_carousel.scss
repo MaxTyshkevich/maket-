@@ -1,36 +1,48 @@
-.pets__heading-center {
-	width: 33.33%;
-}
-
 .carousel {
-	display: flex;
+	display: block;
+	position: relative;
 	align-items: center;
+	margin-top: 58px;
+	padding: 0 105px;
+	@include media-tablet {
+		padding: 0 calc(52px + 12px) 0;
+	}
+	@include media-mobile {
+		margin-top: 42px;
+		padding: 0 15px 115px;
+	}
 }
 
 .carousel-cars {
 	flex: 1;
-	margin-top: 58px;
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@include media-tablet {
+		.card3 {
+			display: none;
+		}
+	}
+	@include media-mobile {
+		flex-direction: column;
+		.card2 {
+			display: none;
+		}
+	}
 }
 
 .card {
-	padding: 30px 35px;
+	width: 270px;
+	height: 435px;
+	padding-bottom: 30px;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	@extend %transition;
+
 	&:hover {
 		cursor: pointer;
 		box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 	}
-}
-
-.card figcaption {
-	margin: 26px 0 30px;
-	text-align: center;
-	font-size: 2rem;
-	line-height: 23px;
-	letter-spacing: 0.06em;
-	color: #545454;
 }
