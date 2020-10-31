@@ -6,7 +6,10 @@
 		margin-top: 60px;
 		text-align: center;
 		@include media-tablet {
+			margin: 0;
 			margin-top: 63px; // под макет
+		}
+		@include media-mobile {
 			margin: 0;
 		}
 	}
@@ -88,5 +91,9 @@
 	align-items: center;
 	@include media-tablet {
 		flex-direction: column;
+	}
+	@include media-mobile {
+		padding: 0 1em;
+		flex-direction: column-reverse;
 	}
 }

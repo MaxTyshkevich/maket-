@@ -37,8 +37,12 @@
 		padding: 10px 15px;
 		background: $color-primary;
 		border-radius: 9px;
+
 		@include media-mobile {
-			margin: auto;
+			h4 {
+				font-size: 1.5rem;
+				line-height: 110%;
+			}
 		}
 
 		.button-credit__img {

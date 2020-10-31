@@ -92,12 +92,6 @@ h4 {
   letter-spacing: 0.06em;
   color: #545454;
 }
-@media (max-width: calc(768px - 1px)) {
-  h4 {
-    font-size: 1.5rem;
-    line-height: 110%;
-  }
-}
 
 h5 {
   font-size: 1.5rem;
@@ -129,26 +123,22 @@ h5 {
 @media (max-width: calc(768px - 1px)) {
   .paragraph-small {
     text-align: justify;
-    padding: 0 1em;
   }
 }
 
-.pets__title {
-  /* 	text-indent: 6rem;
-   max-width: 400px; //width: 33.334%; */
+.title {
   text-align: center;
-  margin: auto;
 }
-.pets__title span {
-  display: inline-block;
+.title span {
+  display: block;
 }
 
-.help__title {
-  text-align: center;
-  margin: auto;
+.text-left {
+  text-align: left;
 }
-.help__title span {
-  display: inline-block;
+
+.text-center {
+  text-align: center;
 }
 
 .button {
@@ -190,8 +180,9 @@ h5 {
   border-radius: 9px;
 }
 @media (max-width: calc(768px - 1px)) {
-  .button--credit {
-    margin: auto;
+  .button--credit h4 {
+    font-size: 1.5rem;
+    line-height: 110%;
   }
 }
 .button--credit .button-credit__img {
@@ -327,7 +318,7 @@ h5 {
   flex: 0 0 50.6%;
 }
 .about__content .main-title {
-  padding-right: 20px;
+  text-align: start;
 }
 @media (max-width: calc(768px - 1px)) {
   .about__content .main-title {
@@ -400,6 +391,7 @@ h5 {
 @media (max-width: calc(768px - 1px)) {
   .carousel-cars {
     flex-direction: column;
+    align-items: center;
   }
   .carousel-cars .card2 {
     display: none;
@@ -437,9 +429,14 @@ h5 {
 @media (max-width: calc(768px - 1px)) {
   .list-help {
     margin-top: 42px;
+    justify-content: flex-start;
     column-gap: 3em;
     row-gap: 3em;
+    padding: 0 5px;
   }
+}
+.list-help .help__title {
+  margin: auto;
 }
 
 .list-help__element {
@@ -458,8 +455,19 @@ h5 {
 }
 @media (max-width: calc(768px - 1px)) {
   .list-help__element {
+    justify-content: space-between;
+    max-width: none;
     width: 130px;
     height: 87px;
+  }
+  .list-help__element img {
+    height: 50px;
+  }
+}
+@media (max-width: calc(768px - 1px)) {
+  .list-help__element h4 {
+    font-size: 1.5rem;
+    line-height: 110%;
   }
 }
 
@@ -485,15 +493,26 @@ h5 {
   .donation-content {
     width: auto;
     text-align: center;
+    padding: 0 1em;
+  }
+  .donation-content .information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-.information__title span {
-  display: inline-block;
+.information__title {
+  text-align: start;
+}
+@media (max-width: calc(768px - 1px)) {
+  .information__title {
+    text-align: center;
+  }
 }
 
 .information > * + * {
-  margin-top: 21px;
+  margin-top: 20px;
 }
 
 .donation-img {
@@ -503,7 +522,6 @@ h5 {
 }
 @media (max-width: calc(1280px - 1px)) {
   .donation-img {
-    order: 1;
     margin-top: 60px;
     margin-right: 0;
   }
@@ -511,6 +529,7 @@ h5 {
 @media (max-width: calc(768px - 1px)) {
   .donation-img {
     margin-top: 42px;
+    padding: 0 20px;
   }
 }
 
@@ -544,14 +563,23 @@ h5 {
     flex-direction: column;
   }
 }
-.footer-container .footer__block {
+
+.footer__block {
   margin-top: 16px;
   display: flex;
   flex-direction: column;
 }
 @media (max-width: calc(1280px - 1px)) {
-  .footer-container .footer__block {
+  .footer__block {
     margin-top: 30px;
+  }
+}
+@media (max-width: calc(768px - 1px)) {
+  .footer__block {
+    align-items: center;
+  }
+  .footer__block h3 {
+    text-align: center;
   }
 }
 
@@ -567,6 +595,11 @@ h5 {
   }
   .contacts > * + * {
     margin-top: 38px;
+  }
+}
+@media (max-width: calc(768px - 1px)) {
+  .contacts {
+    padding: 0 11px;
   }
 }
 
@@ -585,6 +618,21 @@ h5 {
   }
   .location > * + * {
     margin-top: 30px;
+  }
+}
+@media (max-width: calc(768px - 1px)) {
+  .location {
+    margin-top: 42px;
+  }
+  .location h3 {
+    padding: 0 15px;
+  }
+  .location > * + * {
+    margin-top: 40px;
+  }
+  .location > :last-child {
+    align-self: stretch;
+    margin-top: 40px;
   }
 }
 
@@ -609,6 +657,11 @@ h5 {
   .footer__img {
     margin: auto;
     margin-top: 65px;
+  }
+}
+@media (max-width: calc(768px - 1px)) {
+  .footer__img {
+    margin: 4em 2em 0;
   }
 }
 
@@ -699,7 +752,12 @@ h5 {
 }
 @media (max-width: calc(1280px - 1px)) {
   .wrapper--button {
+    margin: 0;
     margin-top: 63px;
+  }
+}
+@media (max-width: calc(768px - 1px)) {
+  .wrapper--button {
     margin: 0;
   }
 }
@@ -790,6 +848,12 @@ h5 {
 @media (max-width: calc(1280px - 1px)) {
   .donation__wrapper {
     flex-direction: column;
+  }
+}
+@media (max-width: calc(768px - 1px)) {
+  .donation__wrapper {
+    padding: 0 1em;
+    flex-direction: column-reverse;
   }
 }
 

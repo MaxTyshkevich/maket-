@@ -3,7 +3,7 @@
 	flex: 0 0 50.6%;
 
 	.main-title {
-		padding-right: 20px;
+		text-align: start;
 		@include media-mobile {
 			padding: 0;
 		}
