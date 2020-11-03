@@ -109,6 +109,7 @@
 		margin-top: 65px;
 	}
 	@include media-mobile {
-		margin: 4em 2em 0;
+		margin: 4em auto 0;
+		width: 260px;
 	}
 }
